@@ -32,7 +32,7 @@ export default function Login() {
   return (
     <div className="login">
       <section className="login-side" aria-hidden="true">
-        <Brand light />
+        <Brand size="xl" />
         <div className="login-side-mid">
           <motion.h2 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE }}>
             Run the whole store from one place.
@@ -50,7 +50,7 @@ export default function Login() {
 
       <section className="login-main">
         <motion.form className="login-card" onSubmit={submit} noValidate initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: EASE }}>
-          <div className="login-mob-brand"><Brand /></div>
+          <div className="login-mob-brand"><Brand size="lg" /></div>
           <span className="login-lock"><Lock size={18} /></span>
           <h1>Admin sign in</h1>
           <p className="muted">Sign in to manage orders, stock, billing and videos.</p>

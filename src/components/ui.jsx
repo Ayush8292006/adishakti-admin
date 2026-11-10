@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowUpRight, ArrowDownRight, CheckCircle2, AlertCircle } from 'lucide-react';
 import { useAdmin } from '../context/AdminContext.jsx';
 
-export const COLORS = { brand: '#4A2316', accent: '#B8235A', accentL: '#E9A6BF', sand: '#D4B497', slate: '#A1A1AA', ok: '#2F9E63' };
-export const PIE = ['#4A2316', '#B8235A', '#D4B497', '#E9A6BF', '#A1A1AA'];
+export const COLORS = { brand: '#793A00', accent: '#BA7143', accentL: '#E4B15E', sand: '#F8DAA9', slate: '#C9BFB2', ok: '#2F9E63' };
+export const PIE = ['#793A00', '#BA7143', '#E4B15E', '#F8DAA9', '#C9BFB2'];
 export const inr = (n) => '₹' + Math.round(n).toLocaleString('en-IN');
 export const inrShort = (n) => (n >= 100000 ? `₹${(n / 100000).toFixed(2)}L` : n >= 1000 ? `₹${(n / 1000).toFixed(1)}k` : inr(n));
 

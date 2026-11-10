@@ -9,13 +9,14 @@ import { Toasts } from './ui.jsx';
 import { isOverdue } from '../data/tally.js';
 import './Shell.css';
 
-export function Brand({ light = false }) {
+export function Brand({ size = 'md' }) {
   return (
-    <span className={`brand ${light ? 'light' : ''}`}>
-      <span className="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="20" height="20"><path d="M10 18c-3 0-4-5 0-6 0-4 6-5 8-2 2-3 8-2 8 2 4 1 3 6 0 6v4H10z" fill="none" stroke="#F6C9D7" strokeWidth="2.6" strokeLinejoin="round" /><rect x="10" y="25" width="16" height="4" rx="2" fill="#F6C9D7" /></svg>
-      </span>
-      <span className="brand-text"><b>Adi Shakti</b><small>Admin</small></span>
+    <span className={`brand brand-${size}`}>
+      <picture className="brand-logo">
+        <source srcSet="/logo.webp" type="image/webp" />
+        <img src="/logo.png" alt="Adi Shakti Trader" width="446" height="360" />
+      </picture>
+      {size !== 'xl' && <span className="brand-tag">Admin Panel</span>}
     </span>
   );
 }
@@ -94,7 +95,7 @@ export default function Shell() {
 
   const sidebar = (
     <>
-      <div className="side-top"><Brand light /></div>
+      <div className="side-top"><Brand /></div>
       <nav className="side-nav" aria-label="Admin">
         {NAV.map((g) => (
           <div key={g.group} className="side-group">
@@ -136,6 +137,7 @@ export default function Shell() {
       <div className="main">
         <header className="top">
           <button className="icon-btn top-menu" onClick={() => setMobileNav(true)} aria-label="Open menu"><Menu size={20} /></button>
+          <span className="top-logo"><Brand size="sm" /></span>
           <GlobalSearch />
           <div className="top-right">
             <button className="icon-btn top-bell" aria-label={`${newOrders + overdue} notifications`} onClick={() => navigate('/orders?status=Pending')}>

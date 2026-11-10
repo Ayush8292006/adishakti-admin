@@ -33,10 +33,10 @@ function OrderTally({ cur, prev, orders, days }) {
           <div style={{ height: 280 }}>
             <ResponsiveContainer>
               <BarChart data={daily} margin={{ top: 4, right: 4, left: -18, bottom: 0 }} barCategoryGap="22%">
-                <CartesianGrid stroke="#eee" vertical={false} />
+                <CartesianGrid stroke="#f1e6d0" vertical={false} />
                 <XAxis dataKey="day" {...axis} interval="preserveStartEnd" minTickGap={14} />
                 <YAxis {...axis} allowDecimals={false} width={36} />
-                <Tooltip content={<ChartTip />} cursor={{ fill: '#f4f4f5' }} />
+                <Tooltip content={<ChartTip />} cursor={{ fill: '#fff4d2' }} />
                 <Bar dataKey="completed" name="Completed" stackId="a" fill={COLORS.brand} animationDuration={800} />
                 <Bar dataKey="pending" name="Pending" stackId="a" fill={COLORS.accentL} animationDuration={800} />
                 <Bar dataKey="cancelled" name="Cancelled" stackId="a" fill={COLORS.slate} radius={[4, 4, 0, 0]} animationDuration={800} />
@@ -63,7 +63,7 @@ function OrderTally({ cur, prev, orders, days }) {
               <BarChart data={channels} layout="vertical" margin={{ left: 8, right: 16 }}>
                 <XAxis type="number" hide />
                 <YAxis type="category" dataKey="name" {...axis} width={96} tick={{ fontSize: 12.5, fill: '#17171a' }} />
-                <Tooltip content={<ChartTip />} cursor={{ fill: '#f4f4f5' }} />
+                <Tooltip content={<ChartTip />} cursor={{ fill: '#fff4d2' }} />
                 <Bar dataKey="value" name="Orders" fill={COLORS.accent} radius={[0, 6, 6, 0]} barSize={20} animationDuration={800} />
               </BarChart>
             </ResponsiveContainer>
@@ -105,10 +105,10 @@ function ProductTally({ cur, products }) {
           <div style={{ height: 300 }}>
             <ResponsiveContainer>
               <BarChart data={cats} margin={{ top: 4, right: 4, left: -14, bottom: 0 }} barGap={3}>
-                <CartesianGrid stroke="#eee" vertical={false} />
+                <CartesianGrid stroke="#f1e6d0" vertical={false} />
                 <XAxis dataKey="name" {...axis} interval={0} tick={{ fontSize: 10.5, fill: '#6b6b75' }} />
                 <YAxis {...axis} width={40} />
-                <Tooltip content={<ChartTip />} cursor={{ fill: '#f4f4f5' }} />
+                <Tooltip content={<ChartTip />} cursor={{ fill: '#fff4d2' }} />
                 <Bar dataKey="sold" name="Sold" fill={COLORS.accent} radius={[4, 4, 0, 0]} animationDuration={800} />
                 <Bar dataKey="available" name="Available" fill={COLORS.brand} radius={[4, 4, 0, 0]} animationDuration={800} />
               </BarChart>
@@ -168,10 +168,10 @@ function BillingTally({ cur, prev, orders }) {
           <div style={{ height: 290 }}>
             <ResponsiveContainer>
               <ComposedChart data={weeks} margin={{ top: 6, right: 6, left: -6, bottom: 0 }}>
-                <CartesianGrid stroke="#eee" vertical={false} />
+                <CartesianGrid stroke="#f1e6d0" vertical={false} />
                 <XAxis dataKey="week" {...axis} />
                 <YAxis {...axis} width={46} tickFormatter={(v) => (v >= 1000 ? `${Math.round(v / 1000)}k` : v)} />
-                <Tooltip content={<ChartTip money />} cursor={{ fill: '#f4f4f5' }} />
+                <Tooltip content={<ChartTip money />} cursor={{ fill: '#fff4d2' }} />
                 <Bar dataKey="received" name="Received" stackId="s" fill={COLORS.brand} barSize={34} animationDuration={800} />
                 <Bar dataKey="pending" name="Pending" stackId="s" fill={COLORS.accentL} radius={[4, 4, 0, 0]} animationDuration={800} />
                 <Line dataKey="total" name="Total" stroke={COLORS.accent} strokeWidth={2.2} dot={{ r: 3.5, fill: COLORS.accent }} animationDuration={1000} />

@@ -48,7 +48,7 @@ export default function Dashboard() {
                 <defs>
                   <linearGradient id="gSales" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={COLORS.accent} stopOpacity={0.22} /><stop offset="100%" stopColor={COLORS.accent} stopOpacity={0} /></linearGradient>
                 </defs>
-                <CartesianGrid stroke="#eee" vertical={false} />
+                <CartesianGrid stroke="#f1e6d0" vertical={false} />
                 <XAxis dataKey="day" tickLine={false} axisLine={false} tick={{ fontSize: 11, fill: '#6b6b75' }} interval="preserveStartEnd" minTickGap={18} />
                 <YAxis tickLine={false} axisLine={false} tick={{ fontSize: 11, fill: '#6b6b75' }} tickFormatter={(v) => (v >= 1000 ? `${v / 1000}k` : v)} width={44} />
                 <Tooltip content={<ChartTip money />} />

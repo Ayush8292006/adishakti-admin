@@ -4,7 +4,7 @@
 .clamp1 { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13.5px; }
 .thumb { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; border: 1px solid var(--line); flex: none; }
 .rank { width: 24px; height: 24px; border-radius: 7px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; font-size: 12px; font-weight: 700; flex: none; }
-.bar { height: 6px; border-radius: 3px; background: #efeff1; margin-top: 6px; overflow: hidden; }
+.bar { height: 6px; border-radius: 3px; background: #f6ecd8; margin-top: 6px; overflow: hidden; }
 .bar span { display: block; height: 100%; border-radius: 3px; background: var(--accent); transition: width 0.8s var(--ease); }
 .strong { font-weight: 600; }
 .sample-note { margin: 18px 0 0; font-size: 12px; }
@@ -53,7 +53,7 @@
 .stepper input:focus { outline: none; background: var(--brand-soft); }
 .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { height: 30px; padding: 0 11px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--panel); font-size: 12.5px; font-weight: 600; color: var(--text-2); transition: all 0.15s; }
-.chip.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+.chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 .img-drop { display: flex; align-items: center; gap: 14px; padding: 12px; border: 1.5px dashed var(--line-2); border-radius: 12px; cursor: pointer; transition: border-color 0.2s; }
 .img-drop:hover { border-color: var(--brand); }
 .img-drop img, .img-drop .ph { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; background: var(--bg); display: grid; place-items: center; color: var(--muted); flex: none; }
@@ -76,7 +76,7 @@
 .inv-sum .grand { border-top: 2px solid var(--text); margin-top: 6px; padding-top: 8px; font-size: 15px; font-weight: 700; }
 
 /* videos */
-.drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 170px; padding: 20px; border: 1.5px dashed var(--line-2); border-radius: 12px; background: #fafafb; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.drop { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 170px; padding: 20px; border: 1.5px dashed var(--line-2); border-radius: 12px; background: #fffaea; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
 .drop:hover, .drop.drag { border-color: var(--brand); background: var(--brand-soft); }
 .drop video { width: 100%; max-height: 220px; border-radius: 10px; background: #000; }
 .drop small { color: var(--muted); }
